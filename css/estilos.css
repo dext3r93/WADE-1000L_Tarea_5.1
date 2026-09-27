@@ -1,0 +1,124 @@
+/* Colores personalizados del proyecto. */
+:root {
+  --azul-principal: #12355b;
+  --azul-secundario: #1f6f8b;
+  --amarillo: #f4b942;
+  --fondo-claro: #f5f7fa;
+  --texto: #24303a;
+  --blanco: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--texto);
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--fondo-claro);
+}
+
+/* Personalización de la navegación Bootstrap. */
+.navbar {
+  background-color: var(--azul-principal) !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+}
+
+.nav-link {
+  border-radius: 0.35rem;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+  color: var(--azul-principal) !important;
+  background-color: var(--amarillo);
+}
+
+/* Encabezado con imagen de fondo solicitado en la rúbrica. */
+.hero-inicio {
+  min-height: 70vh;
+  background:
+    linear-gradient(rgba(10, 31, 55, 0.75), rgba(10, 31, 55, 0.75)),
+    url("../imagenes/portada.jpg") center/cover no-repeat;
+}
+
+.hero-inicio h1 {
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--azul-principal);
+}
+
+.hero-inicio h1,
+.hero-inicio p,
+.seccion-contacto h2 {
+  color: var(--blanco);
+}
+
+.btn-primary {
+  color: var(--blanco);
+  border-color: var(--azul-secundario);
+  background-color: var(--azul-secundario);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  border-color: var(--azul-principal);
+  background-color: var(--azul-principal);
+}
+
+.seccion-contacto {
+  background-color: var(--azul-secundario);
+}
+
+.card {
+  border: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2rem rgba(18, 53, 91, 0.18) !important;
+}
+
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+
+.proyecto-detalle,
+.informacion-contacto {
+  border: 1px solid #d8e0e7;
+  background-color: var(--blanco);
+  box-shadow: 0 0.5rem 1.5rem rgba(18, 53, 91, 0.08);
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* Ajustes adicionales para teléfonos. */
+@media (max-width: 576px) {
+  .hero-inicio {
+    min-height: 60vh;
+  }
+
+  .hero-inicio h1 {
+    font-size: 2.3rem;
+  }
+
+  .card-img-top {
+    height: 190px;
+  }
+}
