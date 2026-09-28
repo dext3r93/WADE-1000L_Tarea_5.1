@@ -6,6 +6,7 @@
   --fondo-claro: #f5f7fa;
   --texto: #24303a;
   --blanco: #ffffff;
+  --darkgrey: #A9A9A9;
 }
 
 * {
@@ -102,6 +103,41 @@ h3 {
   border: 1px solid #d8e0e7;
   background-color: var(--blanco);
   box-shadow: 0 0.5rem 1.5rem rgba(18, 53, 91, 0.08);
+}
+
+/* Selector de ID aplicado a una sección única. */
+#acerca {
+  border-bottom: 5px solid var(--amarillo);
+  background-color: var(--darkgrey);
+}
+
+/* Selector de elemento. */
+body {
+  color: var(--texto);
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--fondo-claro);
+}
+
+/* Selector de clase. */
+.proyecto-detalle {
+  border: 1px solid #d8e0e7;
+  background-color: var(--blanco);
+}
+
+/* Selector de ID. */
+#acerca-de-mi {
+  border-bottom: 5px solid var(--amarillo);
+}
+
+/* Modelo de caja: contenido, relleno, borde y margen. */
+.servicio {
+  height: 100%;
+  margin: 0.5rem;
+  padding: 1.5rem;
+  border: 3px solid var(--azul-secundario);
+  border-radius: 0.75rem;
+  background-color: var(--blanco);
+  box-shadow: 0 0.5rem 1rem rgba(18, 53, 91, 0.12);
 }
 
 footer {
