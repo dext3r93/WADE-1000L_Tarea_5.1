@@ -49,7 +49,7 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <a
-            class="nav-link active"
+            class="nav-link"
             aria-current="page"
             href="index.html"
           >
@@ -74,7 +74,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="laboratorio_js.html">
+          <a class="nav-link active" href="laboratorio_js.html">
             JavaScript
           </a>
         </li>
@@ -97,77 +97,101 @@
   </div>
 </header>
 
-<main>
-  <!-- Sección de información ficticia sobre el propietario. -->
-  <section class="container py-5" id="acerca">
-  <section id="acerca" class="container py-5"></section>
-    <div class="row align-items-center g-4">
-      <div class="col-12 col-md-5">
-        <img
-          src="imagenes/perfil.svg"
-          class="img-fluid rounded shadow"
-          alt="Retrato ilustrado del propietario ficticio"
-        >
-      </div>
+<main class="container py-5">
+  <header class="text-center mb-5">
+    <h1>Laboratorio de JavaScript</h1>
+    <p class="lead">
+      Ejemplos de variables, condiciones, bucles, funciones,
+      alcance y clausuras.
+    </p>
+  </header>
 
-      <div class="col-12 col-md-7">
-        <h2>Acerca de mí</h2>
+  <section id="laboratorio" class="p-4 rounded shadow-sm">
+    <h2>Práctica de conceptos básicos</h2>
 
-        <p>
-          Mi nombre es Alejandro Rivera. Soy un desarrollador web ficticio
-          dedicado a crear páginas claras, accesibles y fáciles de usar.
-        </p>
+    <p>
+      Utiliza los botones para ejecutar cada ejemplo. Los resultados
+      aparecerán en esta página y en la consola del navegador.
+    </p>
 
-        <p>
-          Trabajo con HTML5, CSS, Bootstrap y JavaScript. Mi objetivo es
-          ayudar a pequeños negocios a presentar sus servicios en internet.
-        </p>
+    <div id="controles" class="d-flex flex-wrap gap-2 my-4">
+  <button
+    id="btn-variables"
+    type="button"
+    class="btn btn-primary"
+  >
+    Variables y tipos
+  </button>
 
-        <a href="proyectos.html" class="btn btn-primary">
-          Ver mis proyectos
-        </a>
-      </div>
-    </div>
-  </section>
+  <button
+    id="btn-colecciones"
+    type="button"
+    class="btn btn-success"
+  >
+    Arreglo y objeto
+  </button>
 
-  <!-- Segundo llamado a la acción. -->
-  <section class="seccion-contacto py-5 text-center text-white">
-    <div class="container">
-      <h2>¿Necesitas una página web?</h2>
-      <p>Visita la página de contacto para enviar un mensaje.</p>
+  <button
+  id="btn-bucles"
+  type="button"
+  class="btn btn-info"
+>
+  Ejecutar bucles
+</button>
 
-      <a href="contacto.html" class="btn btn-light">
-        Ir a contacto
-      </a>
-    </div>
-  </section>
-  <!-- Esta sección demuestra el modelo de caja de CSS. -->
-<section class="container py-5">
-  <h2 class="text-center mb-4">Servicios disponibles</h2>
+<button
+  id="btn-alcance"
+  type="button"
+  class="btn btn-secondary"
+>
+  Probar alcance
+</button>
 
-  <div class="row g-4">
-    <div class="col-12 col-md-4">
-      <article class="servicio">
-        <h3 class="h5">Diseño web</h3>
-        <p>Creación de páginas claras y adaptadas a diferentes pantallas.</p>
-      </article>
-    </div>
+<button
+  id="btn-contador"
+  type="button"
+  class="btn btn-dark"
+>
+  Contador con clausura
+</button>
+</div>
 
-    <div class="col-12 col-md-4">
-      <article class="servicio">
-        <h3 class="h5">Diseño responsivo</h3>
-        <p>Organización del contenido para teléfonos y computadoras.</p>
-      </article>
-    </div>
+<section class="row g-3 align-items-end mb-4">
+  <div class="col-12 col-md-8">
+    <label for="puntuacion" class="form-label">
+      Puntuación del proyecto
+    </label>
 
-    <div class="col-12 col-md-4">
-      <article class="servicio">
-        <h3 class="h5">Mantenimiento</h3>
-        <p>Actualización de contenido, enlaces e imágenes del sitio.</p>
-      </article>
-    </div>
+    <input
+      type="number"
+      id="puntuacion"
+      class="form-control"
+      min="0"
+      max="100"
+      placeholder="Escribe un número del 0 al 100"
+    >
+  </div>
+
+  <div class="col-12 col-md-4">
+    <button
+      id="btn-evaluar"
+      type="button"
+      class="btn btn-warning w-100"
+    >
+      Evaluar puntuación
+    </button>
   </div>
 </section>
+
+    <div
+      id="resultado"
+      class="alert alert-secondary"
+      role="status"
+      aria-live="polite"
+    >
+      Selecciona un ejemplo para comenzar.
+    </div>
+  </section>
 </main>
 
 <section class="container py-5">
@@ -240,5 +264,6 @@
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous">
   </script>
+  <script src="js/laboratorio.js"></script>
 </body>
 </html>
